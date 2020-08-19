@@ -1,0 +1,26 @@
+{
+  "name": "Jobs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startServer": "node_modules/.bin/pm2 start server/index.js",
+    "startScheduler": "node_modules/.bin/pm2 start worker/scheduler.js",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "next-app": "0.0.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "pm2": "^4.4.1",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "redis-cli": "^1.4.0"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
